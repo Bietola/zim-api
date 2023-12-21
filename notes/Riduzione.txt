@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-06T15:26:07+01:00
+
+====== Riduzione ======
+
+===== Esempio =====
+Problema: data una MT m e un suo stato q, determinare se q e' //utile// (def. viene raggiunto per qualche input di //m//).
+
+{{./pasted_image001.png?width=500}}
+
+===== Teorema di Rice =====
+Non e' decidibile il problema di validare una qualsiasi proprieta' non banale di una funzione calcolabile.
+
+Una proprieta' non banale e' una proprieta' **semantica** (e.g. "MT ha stato iniziale terminale" e' //sintattica//) che non si applica a tutte o nessuna delle funzioni calcolabili.
+
+Il prof concettualizza Rice in termini di **ricorsività di un insieme**.
+
+{{./pasted_image.png?width=750}}
+
+Altra formulazione del prof in un esercizio di //extra.//
+
+{{./pasted_image003.png?width=700}} 
+
+formulazione delle banalità:
+{{./pasted_image001.png?width=500}}

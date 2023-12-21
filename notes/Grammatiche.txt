@@ -1,0 +1,54 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-06T15:26:16+01:00
+
+====== Grammatiche ======
+
+===== Definizione =====
+Insieme di regole/leggi di re-scrittura. Esempio:
+S -> aABC
+A -> abawecawcwaA
+B -> weonwaonceowB
+A -> //**vuoto**//
+Quindi nel senso di "scrivere di nuovo" da una forma a un'altra. Da **non-terminali** (es. A, B, C, ...) a **non-terminali+terminali** (es. aA, bB, abAB, ...).
+
+===== Gerarchia di Chomsky =====
+
+{{./pasted_image.png?width=500}}
+
+==== Tipo 2: Context Free (eq. a APND) ====
+Grammatica che contiene un solo non-terminale a sinistra di ogni legge.
+
+Esempio:
+S -> aAbc | **nullo**
+A -> Ab | aBaa | AcBjskA
+B -> bBbb | **nullo**
+
+==== Tipo 2.5: Lineare (sottoinsieme di APND) ====
+Grammatica context free che contiene un solo terminare per legge.
+
+Esempio:
+S -> aA | **nullo**
+A -> Ab | aB | Ac
+B -> bB | **nullo**
+
+==== Tipo 3: Regolare (eq. a ASF) ====
+Grammatica lineare che e' o solo destra-ricorsiva, o solo sinistra-ricorsiva.
+
+Esempio di grammatica regolare destro-ricorsiva:
+S -> aA
+A -> abawecawcwaA | B | **nullo**
+B -> weonwaonceowB | **nullo**
+
+Esempio di grammatica regolare sinistro-ricorsiva:
+S -> aA
+A -> Aabawecawcwa
+A -> Basc
+A -> **nullo**
+B -> Bweonwaonceow | **nullo**
+
+===== Trucchi =====
+
+==== Raddioppiare lettere per poi spostare a dx, sx ====
+
+...

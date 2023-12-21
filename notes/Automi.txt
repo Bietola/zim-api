@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-06T15:26:01+01:00
+
+====== Automi ======
+
+===== Tipi di Automi =====
+* Stati finiti
+* A plia
+	* Importante: da usare quando in un linguaggio c'e' bisogno di contare.
+
+===== Sbagli =====
+
+* a^{n}b^{n} non e' uguale a a^{+}b^{+}. Nel primo caso bisogna contare, nel secondo no.
+
+===== Macchine di Turing =====
+
+==== Contatori binari ====
+
+E' possibile contare il numero di una qualsiasi lettera su input e metterlo **in binario al contrario** sul nastro di memoria.
+
+{{./pasted_image.png?width=500}}
+
+==== MTND per palindromi con cose a caso in mezzo ====
+
+Stringhe della forma AXA. Esempio: "**abb**aabbaba**abb**"
+
+
+{{~/Downloads/image_2023-12-05_18-09-07.png?width=500}}
+
+
+

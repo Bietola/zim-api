@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-13T19:01:19+01:00
+
+====== Alberi ======
+
+===== Albero generico =====
+
+{{~/Downloads/image_2023-12-16_11-29-29.png?width=800}}
+
+
+{{~/Downloads/image_2023-12-16_11-33-00.png?width=800}}
+
+
+===== Parametrizzazione BST =====
+
+```cpp
+int main() {
+  BST<int>* tree = new BST<int>();
+  tree->insert(2);
+  tree->insert(5);
+  tree->insert(1);
+  if (search(tree, 7)) {
+	printf("Ciao!");
+  }
+  BST<string>* stree = new BST<string>();
+  stree->insert("ciao");
+  stree->insert("hello");
+}
+```
+
+===== Algoritmo di ricerca =====
+
+template <class T>
+int search(BST<T>* root, T element) {
+	// Versione lunga
+	if (root->data == element) {
+		return 1;
+	}
+	else if (search(root->left, element) == 1) {
+		return 1;
+	}
+	else if (search(root->right, element) == 1) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+	// Versione corta
+	/* return root->data || search(root->left, element) || search(root->right, element); */
+}
+```

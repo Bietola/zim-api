@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-09T10:09:53+01:00
+
+====== ADT (Abstract Data Types) su alberi ======
+
+===== BST =====
+Ricerca: O(logn) (NB. nel caso medio)
+Max/min: O(n)
+Rimozione: O(logn)
+Inserimento: O(logn)
+
+===== Heap =====
+Ricerca: O(n)
+Max/min: O(1)
+Rimozione: O(logn)
+Inserimento: O(logn)
+
+===== Lista puntata =====
+Ricerca: O(n)
+Max/min: O(n)
+Rimozione: O(n)
+Inserimento: O(1)

@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-06T15:26:12+01:00
+
+====== Decidibilità ======
+
+===== Terminologia =====
+Decidbilità:		Problema decidibile		Insieme ricorsivo						Funzione computabile/calcolabile	Funzione ricorsiva
+Semidecidibilità:	Problema semidecidibile	Insieme ricorsivamente enumerabile	Funzione semidecidibile			Funzione ricorsivamente enumerabile (???) 
+
+NB. Definizioni ufficiali della prof in //materials/parte IT Scansioni/...-extra.pdf//
+
+===== Definizione =====
+Un problema e' decidibile se esiste una MT //che si arresta// e che lo risolve.
+
+===== Definizione tramite Tesi di Church-Turing =====
+//We shall use the expression "computable function" to mean a function calculable by a machine, and let "effectively calculable" refer to the intuitive idea without particular identification with any one of these definitions.//
+//- Fraseggio originale da Church//
+
+//It was stated ... that "a function is effectively calculable if its values can be found by some purely mechanical process". We may take this literally, understanding that by a purely mechanical process one which could be carried out by a machine. The development ... leads to ... an identification of computability with effective calculability.//
+//- Fraseggio originale da Turing (prosegue subito dopo a citare Church sopra)//
+
+Equivalenza di tre definizioni della decidibilità (Turing-completo, lambda-calcolabile, ...) + concetto informale di "ci si può arrivare con la carta".
+
+Tesi di Church-Turing usata dalla prof per dire che decidibilità può anche essere frasata in "cerca una algoritmo turing-complete che..."
+
+===== Semidecibilità =====
+Come decidibilità, ma la MT risole il problema solo se la risposta e' **si**, altrimenti potrebbe non arrestarsi. Deve solo sempre arrivare alla giusta soluzione in caso di appartenenza all'insieme (i.e. risposta positiva al problema).
+
+===== Tecniche per determinare la decidibilità =====
+
+==== Proprietà banale di f / Struttura triviale (sintattica) di MT ====
+Es.: m(x, y) = passi di MT_{x} con input y. E' calcolabile determinare se m(x, y) = 0?
+
+La risposta e' banalmente **si**. Perche' si vede da una proprietà triviale della MT, ovvero: se lo stato iniziale e' terminale.
+
+=== Equivalenza con teorema di Rice ===
+Questa tecnica coincide con il trovare una //proprietà banale di una funzione ricorsiva/computabile// nel **teorema di Rice**, che appunto afferma che //l'insieme di funzioni ricorsive/computabili di una determinata proprietà e' ricorsivo **se e solo se** la proprietà e' banale.//
+
+Una proprietà banale e' una proprietà che vale o per tutte le funzioni computabili o per nessuna.
+
+==== Decidibilità di problemi irrisolti ====
+A volte un problema può non avere ancora una soluzione ufficiale e comunque essere decidibile. Per dimostrarlo basta elencare tutte le possibili funzioni di appartenenza, se sono tutte computabili allora il problema e' decidibile. Un esempio e' il problema dei numeri primi gemelli.
+
+==== Simulazione Diagonale ====
+Tecnica usata per determinare semidecidibilità. Esempio: data MT m e un suo stato q, determinare se lo stato e' //utile.//
+
+Problema con simulazione //lineare//: macchina potrebbe bloccarsi per sempre mentre esegui un particulare input, quindi non proverebbe mai gli input seguenti!
+
+//simulazione diagonale// sarebbe simulare, e.g.:
+primo step primo input, primo step secondo input, primo step terzo input, ... (infiniti),
+secondo step primo input, secondo step secondo input, ...
+...
+
+O, da immagine:
+{{./pasted_image.png?width=500}}
+
+Cosi' si capisce che se esiste un input per il quale si raggiunge lo stato q, prima o poi ci si arriverà, **altrimenti la MTU si blocca**. Ma quindi il problema e' **semidecidibile.**
+
+==== 1/2 + 1/2 = 1 ====
+Se un problema e il suo complementare sono semidecidibili, allora il problema originale e decidibile.
+
+{{./pasted_image.png?width=500}}

@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-20T17:43:01+02:00
+
+====== Concetti Teorici di Base ======
+
+===== Elevazione di alfabeto a potenza {a, b}^{n} =====
+Elevare un alfabeto a una potenza equivale a generare tutte le parole possibili (con le lettere dell'alfabeto in question) della lunghezza indicata dalla potenza.
+
+Esempio:
+{{./pasted_image002.png?width=500}}
+
+==== Esempio con Llinguaggio che usa Concatenazione e Conteggio ====
+
+{{./pasted_image.png?width=500}}

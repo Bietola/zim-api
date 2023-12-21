@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-06T15:26:19+01:00
+
+====== Logica ======
+
+===== Definizione logica proposizionale =====
+1. un simbolo di proposizione è una fbf
+2. se A è una fbf lo è anche (¬A)
+3. se A e B sono fbf allora lo sono anche (A ∧ \wedge B), (A ∨ \vee B), (A → B) e (A ↔ B)
+4. niente altro è una fbf
+
+===== XOR =====
+XOR ti permette di dichiarare che due predicati sono esclusivamente veri. O vero uno, o l'altro, ma non entrambi. Per usare lo XOR, si deve usare //implica, nega//. Es. pred1(x) => ~pred2(y).
+
+===== Unicità =====
+Per dichiarare che un predicato e' unico si dichiara che se il predicato vale per due variabili, allora in verita' le due variabili sono la stessa variabile.
+
+Es: La direzione di una cella “strada” è unica.
+∀x∀y∀d∀d′ ( strada(x,y,d) ∧ strada(x,y,d′) → d=d′ )
